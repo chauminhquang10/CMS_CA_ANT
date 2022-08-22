@@ -1,0 +1,82 @@
+image: node:14
+
+stages:
+  - test
+  - build
+  - deploy
+
+# This folder is cached between builds
+# http://docs.gitlab.com/ee/ci/yaml/README.html#cache
+
+lint:
+  stage: test
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - yarn install
+    - UMI_ENV=dev yarn openapi
+    - yarn lint
+    - UMI_ENV=dev yarn build
+  only:
+    - merge_requests
+  except:
+    - main
+    - develop
+  tags:
+    - hcm-share-docker-runner
+
+build_test:
+  stage: deploy
+  image: linuxserver/openssh-server:version-8.8_p1-r1
+  variables:
+    APP_NAME: cms-ca
+    GIT_URL: git@git.sunshinetech.vn:unicloudca/unicloud-ca-cms.git
+    CI_COMMIT_REF_NAME: develop
+  before_script:
+    - mkdir -p ~/.ssh
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    - echo -e "$SSH_DEPLOY_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+  script:
+    - scp -r -i ~/.ssh/id_rsa ./* unicloud@10.30.1.111:/home/unicloud/unicloud-ca-cms/
+    - ssh -i ~/.ssh/id_rsa unicloud@10.30.1.111 "mkdir -p ca-cms; cd /home/unicloud/ca-cms; rm -rf unicloud-ca-cms; git clone $GIT_URL; cd unicloud-ca-cms; git reset --hard; git checkout $CI_COMMIT_REF_NAME; git pull; docker rm -f ca-cms-web; docker build . --build-arg UMI_ENV=dev --no-cache -t $APP_NAME:test; docker run -d --name ca-cms-web --restart unless-stopped -p 2098:8001 $APP_NAME:test; docker system prune -f;"
+  only:
+    - develop
+  tags:
+    - hcm-share-docker-runner
+
+build-uat:
+  stage: build
+  image:
+    name: gcr.io/kaniko-project/executor:debug
+    entrypoint: [""]
+  variables:
+    DOCKER_EXTRA_ARGS: '
+      --build-arg UMI_ENV=prod
+    '
+  script:
+    - mkdir -p /kaniko/.docker
+    - echo "{\"credsStore\":\"ecr-login\"}" > /kaniko/.docker/config.json
+    - >-
+      /kaniko/executor
+      ${DOCKER_EXTRA_ARGS}
+      --context "${CI_PROJECT_DIR}"
+      --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
+      --destination "${REGISTRY_URL}:stg-latest"
+  only:
+    - uat
+  tags:
+    - hcm-share-docker-runner
+
+deploy-uat:
+  stage: deploy
+  image:
+    name: baristi000/auto-eks:latest
+    entrypoint: [""]
+  script:
+    - /setup/script.sh
+  only:
+    - uat
+  tags:
+    - hcm-share-docker-runner

@@ -1,0 +1,51 @@
+.steps-custom {
+  background: transparent;
+  .ant-steps-item-process > {
+    .ant-steps-item-icon {
+      background: #0c3399;
+      border: none;
+    }
+  }
+  .ant-steps-item-wait {
+    .ant-steps-item-icon {
+      background: #bdc4d8;
+      border: none;
+      span {
+        color: #fff !important;
+      }
+    }
+    .ant-steps-item-title {
+      color: #bdc4d8 !important;
+    }
+  }
+  .ant-steps-item-container > {
+    .ant-steps-item-title {
+      color: #0c3399;
+      font-weight: 400;
+      font-size: 12px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+    }
+  }
+  .ant-steps-item-title {
+    padding-right: 30px;
+    &::after {
+      height: 2px;
+      background-color: rgba(43, 47, 51, 0.1) !important;
+    }
+  }
+  .ant-steps-item-finish {
+    .ant-steps-item-icon {
+      background-color: #34c759;
+      border-color: #85dd9b;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+    > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title {
+      color: #34c759;
+    }
+  }
+}

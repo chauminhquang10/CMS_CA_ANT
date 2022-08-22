@@ -1,0 +1,8 @@
+version: '3.7'
+
+services:
+  ca-cms-web:
+    images: cms-ca:test
+    container_name: ca-cms-web
+    ports:
+    - 2098:8000

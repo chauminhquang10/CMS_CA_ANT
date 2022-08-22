@@ -1,0 +1,97 @@
+.select-form-custom {
+  &.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+    height: fit-content;
+    padding: 4px 8px 4px 16px;
+    border: 1px solid #e2e6f2;
+    border-radius: 8px;
+    .ant-select-selection-item {
+      display: flex;
+      align-items: center;
+      color: #212633;
+      font-weight: 400;
+      font-size: 14px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+  .anticon {
+    svg {
+      path {
+        fill: #76809b;
+      }
+    }
+  }
+}
+.detail-package {
+  margin-top: 20px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px 0 #f1f3f4;
+  .header-title {
+    text-align: center;
+  }
+  .ant-input-disabled {
+    padding: 8px 16px;
+    background: rgba(43, 47, 51, 0.1);
+    border: 1px solid rgba(43, 47, 51, 0.1);
+    border-radius: 8px;
+  }
+}
+ul.form-list-check {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-row-gap: 12px;
+  align-content: stretch;
+  width: 100%;
+  max-height: 156px;
+  padding: 12px 16px;
+  row-gap: 12px;
+  li {
+    position: relative;
+    padding-left: 32px;
+    color: #525b73;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+    &::before {
+      position: absolute;
+      left: 0;
+      z-index: 2;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../../../assets/images/svg/icon/icon-check.svg');
+      content: '';
+    }
+  }
+}
+
+ul.form-list-dot {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  grid-row-gap: 12px;
+  align-content: stretch;
+  width: 100%;
+  padding: 10px 16px;
+  list-style: inside;
+  row-gap: 12px;
+  li {
+    color: rgba(43, 47, 51, 0.4);
+    font-weight: 400;
+    font-size: 14px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+  }
+}
+
+.form-custom {
+  background: rgba(43, 47, 51, 0.1);
+  border: 1px solid rgba(43, 47, 51, 0.05);
+  border-radius: 8px;
+}

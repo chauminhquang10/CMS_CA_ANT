@@ -1,0 +1,66 @@
+.custom-status-normal {
+  position: relative;
+  display: block;
+  div {
+    padding-left: 16px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: #1890ff;
+    border-radius: 33px;
+    transform: translateY(-50%);
+    content: '';
+  }
+}
+.custom-status-dangerous {
+  position: relative;
+  div {
+    padding-left: 16px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: #ff3b49;
+    border-radius: 33px;
+    transform: translateY(-50%);
+    content: '';
+  }
+}
+.custom-status-warning {
+  position: relative;
+  div {
+    padding-left: 16px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: #fec318;
+    border-radius: 33px;
+    transform: translateY(-50%);
+    content: '';
+  }
+}
+
+.custom-status-success {
+  position: relative;
+  div {
+    padding-left: 16px;
+  }
+  &::before {
+    position: absolute;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background: #52c41a;
+    border-radius: 33px;
+    transform: translateY(-50%);
+    content: '';
+  }
+}

@@ -1,0 +1,60 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.group-process-dashed {
+  .ant-progress-steps-outer .ant-progress-steps-item {
+    border-radius: 4px;
+  }
+  .ant-progress-steps-item-active {
+    background: #528eff;
+  }
+  .ant-progress-steps-item {
+    width: 20px !important;
+  }
+  &.exception {
+    .ant-progress-steps-item-active {
+      background: #528eff;
+    }
+  }
+  &.success {
+    .ant-progress-steps-item-active {
+      background: #34c759;
+    }
+  }
+  &.normal {
+    .ant-progress-steps-item-active {
+      background: #528eff;
+    }
+  }
+  // &.dangerous {
+  //   .ant-progress-steps-item-active {
+  //     background: #ff3b49;
+  //   }
+  // }
+}
+
+.divider-small {
+  width: 14px;
+  height: 2px;
+  background-color: #525b73;
+  border-radius: 16px;
+}
+
+.txt-date-label {
+  color: #525b73;
+  font-weight: 700;
+}
+
+.txt-date-sub-label {
+  color: #76809b;
+  font-weight: 400;
+}
+
+.txt-date {
+  font-size: 10px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  line-height: 14px;
+}
+.txt-data-btn {
+  color: #76809b;
+}

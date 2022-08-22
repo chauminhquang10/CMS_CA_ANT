@@ -1,0 +1,66 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.group-process-dashed {
+  .ant-progress-steps-outer .ant-progress-steps-item {
+    border-radius: 4px;
+  }
+  .ant-progress-steps-item-active {
+    background: #528eff;
+  }
+  .ant-progress-steps-item {
+    width: 20px !important;
+  }
+
+  /*
+  * Status Type Circle
+  */
+  &.ant-progress-status-active {
+    .ant-progress-inner:not(.ant-progress-circle-gradient) {
+      .ant-progress-circle-path {
+        --ant-primary-color: #528eff;
+      }
+    }
+  }
+
+  /*
+  * Status Type Line and Dashed
+  */
+
+  &.ant-progress-status-exception {
+    .ant-progress-inner:not(.ant-progress-circle-gradient) {
+      .ant-progress-circle-path {
+        --ant-primary-color: #ff3b49;
+      }
+    }
+    .ant-progress-bg,
+    .ant-progress-text {
+      --ant-error-color: #ff3b49;
+    }
+    .ant-progress-steps-item-active {
+      background: #ff3b49;
+    }
+  }
+  &.ant-progress-status-success {
+    .ant-progress-inner:not(.ant-progress-circle-gradient) {
+      .ant-progress-circle-path {
+        --ant-primary-color: #34c759;
+      }
+    }
+    .ant-progress-bg,
+    .ant-progress-text {
+      --ant-success-color: #34c759;
+    }
+    .ant-progress-steps-item-active {
+      background: #34c759;
+    }
+  }
+  &.ant-progress-status-normal {
+    .ant-progress-bg,
+    .ant-progress-text {
+      --ant-primary-color: #528eff;
+    }
+    .ant-progress-steps-item-active {
+      background: #528eff;
+    }
+  }
+}

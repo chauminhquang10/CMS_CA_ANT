@@ -1,0 +1,311 @@
+@import (reference) '~antd/es/style/themes/index';
+
+.btn-custom {
+  height: fit-content;
+  padding: 4px 8px;
+  font-weight: 500;
+  font-size: 10px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  line-height: 14px;
+  border: none;
+  border-radius: 4px;
+  span[role='img'] {
+    line-height: 0 !important;
+  }
+  &:focus {
+    border: none;
+    box-shadow: none;
+  }
+
+  /*
+  * Type Button 
+  */
+  &.btn-normal {
+    color: #528eff;
+    background-color: #e2eeff;
+  }
+  &.btn-dangerous {
+    color: #ff3b49;
+    background: #faf4f4;
+  }
+  &.btn-warning {
+    color: #fec318;
+    background: #fffaea;
+  }
+  &.btn-success {
+    color: #34c759;
+    background: #fff;
+    border: 1px solid #34c759 !important;
+  }
+
+  &.btn-disable {
+    color: rgba(43, 47, 51, 0.4);
+    background: #f2f2f2;
+  }
+
+  &.btn-disable-step {
+    padding: 10px 16px;
+    color: rgba(43, 47, 51, 0.4);
+    background: #f2f2f2;
+    border-radius: 8px;
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+    svg {
+      path {
+        fill: rgba(43, 47, 51, 0.4);
+      }
+    }
+  }
+
+  &.btn-icon {
+    width: 18px;
+    height: auto;
+    padding: 0;
+    background-color: #fff;
+  }
+
+  &.btn-icon-border {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background-color: #fff;
+    border: 1px solid #2b2f3333;
+  }
+  &.btn-radius-default {
+    background: #f7f9ff;
+    border: 1px solid #bdc4d8;
+    border-radius: 16px;
+  }
+  &.btn-excel {
+    padding: 8px 16px;
+    background: #0c3399;
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+  &.btn-add {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #0c3399;
+    border-radius: 8px;
+    span {
+      color: #fff;
+      font-size: 16px;
+    }
+    .anticon {
+      line-height: 0% !important;
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &.btn-excel-normal {
+    padding: 7px 16px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    span {
+      color: #0c3399;
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+
+  &.btn-close {
+    padding: 10px 16px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    border-radius: 8px;
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 20px;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  &.btn-primary-blue {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #0c3399;
+    border-radius: 8px;
+    .anticon {
+      line-height: 0% !important;
+    }
+    span {
+      color: #fff;
+      font-weight: 500;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 20px;
+      letter-spacing: 0.05rem;
+    }
+  }
+  &.btn-icon-text {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: #0c3399;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    border-radius: 8px;
+    .anticon {
+      line-height: 0;
+    }
+  }
+
+  &.btn-primary {
+    display: flex;
+    align-items: center;
+    padding: 10px 16px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+    background: #0c3399;
+    border-radius: 8px;
+    .anticon {
+      line-height: 0;
+    }
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+  &.btn-processing {
+    padding: 4px 18px;
+    color: #0979fd;
+    font-weight: 500;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 16px;
+    background: #f3f8ff;
+    border: 1px solid #0979fd;
+    border-radius: 4px;
+  }
+  &.btn-loading-disable {
+    padding: 10px 16px;
+    border-radius: 8px;
+    span {
+      font-weight: 500;
+      font-size: 16px;
+      font-style: normal;
+      line-height: 20px;
+      letter-spacing: 0.05rem;
+    }
+  }
+
+  &.btn-save {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    border-radius: 8px;
+    span:not(span[role='img']) {
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+    span[role='img'] {
+      line-height: 0;
+    }
+  }
+
+  &.btn-dropdown {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    border-radius: 8px;
+    span {
+      color: #0c3399;
+    }
+    span:not(span[role='img']) {
+      font-weight: 500;
+      font-size: 14px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+
+  &.btn-upload {
+    display: flex;
+    align-items: center;
+    padding: 9px 12px;
+    border: 1px solid rgba(43, 47, 51, 0.2);
+    border-radius: 8px;
+    span {
+      color: #0c3399;
+    }
+    span:not(span[role='img']) {
+      font-weight: 500;
+      font-size: 16px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.btn-process-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  background: inherit;
+  border: none !important;
+  outline: none;
+  box-shadow: none !important;
+  &:hover {
+    background: transparent;
+    border: none;
+    box-shadow: none !important;
+  }
+  &:focus {
+    color: inherit;
+    border: none;
+    box-shadow: none;
+  }
+}
+button[data-icon='icon'] {
+  display: flex;
+  align-items: center;
+}

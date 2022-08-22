@@ -1,0 +1,328 @@
+.col-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.lable-details {
+  color: #525b73;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+}
+.details-information {
+  color: #212633;
+  font-weight: 600;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+  //   text-transform: capitalize;
+}
+
+.lable-infor-customer {
+  width: 120%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(43, 47, 51, 0.05);
+}
+
+.details-infor-customer {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(43, 47, 51, 0.05);
+}
+
+.card-custom-details-infor-wrap {
+  .ant-pro-card-body {
+    padding: 0;
+  }
+  .ant-pro-card-header {
+    padding-left: 16px !important;
+  }
+  .ant-pro-card-title {
+    color: #212633;
+    font-weight: 700;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 24px;
+  }
+}
+.card-custom-details-infor {
+  .ant-tabs-tab-active {
+    // border-bottom: 4px solid #0c3399;
+    .ant-tabs-tab-btn {
+      color: #0c3399;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: 'SF Pro Text';
+      font-style: normal;
+      line-height: 20px;
+    }
+  }
+  .ant-tabs-ink-bar {
+    background: #0c3399;
+  }
+  .ant-tabs-nav-list {
+    padding-left: 0 !important;
+  }
+  .ant-tabs-tab {
+    padding-right: 16px;
+    padding-left: 16px;
+    color: #76809b;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+  }
+  .ant-tabs-content-holder {
+    padding: 32px 16px;
+  }
+}
+.wrap-detail-infor {
+  margin-bottom: 32px;
+  padding: 16px;
+  background: rgba(43, 47, 51, 0.05);
+  border-radius: 6px;
+}
+
+.lable-title-infor {
+  color: #212633;
+  font-weight: 700;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+}
+.lable-organization-details {
+  margin-bottom: 16px;
+  color: #525b73;
+  font-weight: 700;
+  font-size: 12px;
+  font-style: normal;
+  line-height: 16px;
+}
+.div-under-organization-details {
+  margin-bottom: 16px;
+  border: 1px solid #e2e6f2;
+}
+.lable-unfinished-detail-infor {
+  margin-left: 4px;
+  color: #99a2bc;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  line-height: 16px;
+}
+.lable-finished-detail-infor {
+  margin-left: 4px;
+  color: #34c759;
+  font-weight: 500;
+  font-size: 12px;
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  line-height: 16px;
+}
+
+.switch-custom.ant-switch-checked {
+  background: #aee9bd;
+}
+.title-link-document {
+  margin-right: 32px;
+  span {
+    color: #244ab1;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+    text-decoration: underline;
+  }
+}
+
+.custom-button-details-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 7px;
+  background: transparent;
+  border: 1px solid;
+  border-color: rgba(43, 47, 51, 0.2) !important;
+  border-radius: 8px;
+  transition: background 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  &:hover {
+    padding: 8px;
+    background: #eff3ff !important;
+    border: none !important;
+
+    &.is-lock {
+      background: #eff3ff;
+      cursor: pointer;
+      svg {
+        path {
+          fill: #4367c7;
+        }
+      }
+    }
+  }
+  &.is-lock {
+    background: #4367c7;
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
+
+.tooltip-custom {
+  .ant-tooltip-inner {
+    padding: 8px 12px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 16px;
+    background: #0979fd;
+    border-radius: 4px;
+  }
+  .ant-tooltip-arrow-content {
+    --antd-arrow-background-color: #0979fd;
+  }
+}
+
+.modal-lock-certificate {
+  .ant-modal-body {
+    width: 100%;
+    min-width: 700px;
+  }
+}
+.modal-recall {
+  .ant-modal-body {
+    width: 100%;
+    // min-width: 510px;
+    min-width: 510px;
+  }
+}
+.modal-notification {
+  .ant-modal-body {
+    width: 100%;
+    min-width: 450px;
+  }
+}
+.custom-collap-view-history {
+  .anticon {
+    margin-right: 11px;
+  }
+  .ant-pro-card-title {
+    display: flex;
+    color: #212633;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+  }
+}
+
+.custom-form-certificate-lock {
+  .text-detail-history {
+    color: #212633;
+    font-weight: 700;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+  }
+  label {
+    color: #212633;
+    font-weight: 500;
+    font-size: 14px;
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    line-height: 20px;
+  }
+}
+
+.row-input-upload-custom {
+  padding: 16px;
+  background: #fff;
+  border: 1px solid #e2e6f2;
+  border-radius: 8px;
+}
+
+.title-input-upload-custom {
+  margin-bottom: 16px;
+  color: #212633;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 20px;
+}
+.custom-input-upload {
+  .sub-title-input-upload {
+    margin-left: 12px;
+    color: #212633;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 20px;
+  }
+  .ant-upload {
+    width: 100%;
+    .ant-btn-default {
+      width: 100%;
+      margin-top: 12px;
+      border: 1px dashed rgba(43, 47, 51, 0.2);
+      border-radius: 8px;
+      span {
+        color: #76809b;
+        font-weight: 500;
+        font-size: 16px;
+        font-style: normal;
+        line-height: 20px;
+      }
+    }
+  }
+  .ant-form-item-required {
+    &::before {
+      content: '' !important;
+    }
+  }
+  .ant-form-item-label {
+    border-bottom: 1px solid #edf1fa;
+  }
+  .ant-upload-list-item {
+    border: none;
+    border-bottom: 1px solid #edf1fa;
+  }
+}
+.table-history-lock-CA {
+  .ant-table-body::-webkit-scrollbar-thumb {
+    background-color: #a2a4a5 !important;
+    border: 2px solid #dedfdf !important;
+  }
+  .ant-table-body::-webkit-scrollbar-track {
+    background-color: #f5f5f5;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  .ant-table-body::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f5f5f5;
+  }
+}
+
+// overflow-y
+.overflow-y-custom {
+  height: 100%;
+  max-height: calc(100vh - 490px);
+  overflow-y: auto;
+}
